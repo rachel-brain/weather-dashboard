@@ -1,0 +1,88 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    font-family: 'Balsamiq Sans', Arial, sans-serif;
+  }
+  
+  /* Color scheme sourced from https://www.color-hex.com/color-palette/107368 70s colors color palette */
+:root {
+    --colora: #00a0d9;
+    --colorb: #b800a6;
+    --colorc: #68a549;
+    --colord: #ff4ea6;
+    --colore: #fdcd00;
+}
+
+header {
+  padding: 10px;
+  background-color: var(--colorb);
+  color: var(--colore);
+  width: 100%;
+}
+
+h1 {
+  text-align: center;
+  font-size: 40px;
+  font-weight: 700;
+}
+
+h2 {
+  text-align: left;
+  font-size: 30px;
+  font-weight: 400;
+  color: var(--colorc);
+}
+
+.search-container {
+  float: left;
+  width: 30%;
+  padding: 10px;
+}
+
+.results-container {
+  float: right;
+  width: 70%;
+  padding: 10px;
+}
+
+#city {
+  width: 50%;
+  padding: 10px;
+  margin: 8px 0;
+  border: 1px solid var(--colorb);
+  border-radius: 4px;
+  box-sizing: border-box;
+  font-size: 25px;
+}
+  
+.btn {
+  padding: 2px;
+  margin: 2px;
+  cursor: pointer;
+  border: 1px solid var(--colorb);
+  background-color: var(--colorb);
+  color: var(--colore);
+  font-size: 30px;
+}
+  
+.card {
+  padding: 10px;
+  border: 1px solid var(--colorc);
+  border-collapse: collapse;
+  font-size: 20px;
+}
+
+#figure1,
+#figure2,
+#figure3,
+#figure4,
+#figure5 {
+  border-radius: 5px;
+  border: 1px solid var(--colora);
+  background-color: var(--colora);
+  color: var(--colord);
+  width: 225px;
+  height: 500px;
+  margin: 5px;
+  padding: 2px 5px;
+}
