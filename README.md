@@ -38,7 +38,8 @@ The following image shows the web application's appearance and functionality:
 
 * Application deployed at live URL:
 
-    
+    https://rachel-brain.github.io/weather-dashboard/
 
 * Application GitHub URL including GitHub repository containing application code:
 
+    https://github.com/rachel-brain/weather-dashboard
