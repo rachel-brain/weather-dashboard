@@ -7,104 +7,125 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link href="https://fonts.googleapis.com/css2?family=Balsamiq+Sans&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
-    <link rel="stylesheet" href="reset.css" />
-    <link rel="stylesheet" href="style.css"/>
+    <link rel="stylesheet" href="./assets/css/reset.css" />
+    <link rel="stylesheet" href="./assets/css/style.css" />
     <title>Weather dashboard</title>
 </head>
 
 <body>
     <header>
         <h1 class="app-title">
-            <i class="fas fa-cloud-sun"></i>   Weather dashboard</h1>
+            <i class="fas fa-cloud-sun"></i> Weather dashboard</h1>
     </header>
 
     <main>
         <div class="container">
-            <div class="row">
-                <div class= "search-container">
+            <div class="search-container">
                 <h2>Search for a city to see upcoming weather conditions:</h2>
                 <form>
-                    <div id="form-city">
-                        <input id="city" class="form-control form-control-lg" type="text">
-                        <button id="fetch-button" type="search"><i class="btn fas fa-search"></i></button>
-                    </div>     
+                    <div class="row">
+                        <div id="form-city">
+                            <input id="city" id="country" class="form-control form-control-lg" type="text"
+                                placeholder="City,Country code">
+                            <button id="fetch-button" type="search"><i class="btn fas fa-search"></i></button>
+                        </div>
+                    </div>
                 </form>
                 <br>
                 <br>
-                    <div class="card" style="width: 20rem;">
-                        <!-- A set list of popular US cities loaded on opening webpage -->
-                        <div class="list-cities list-cities-flush">
-                            <a href="http://api.openweathermap.org/geo/1.0/direct?q=austin,TX&appid=5f032585108c80fe6cb544e3869e6a7f">Austin</a>
-                            <br>
-                            <a href="http://api.openweathermap.org/geo/1.0/direct?q=chicago,IL&appid=5f032585108c80fe6cb544e3869e6a7f">Chicago</a>
-                            <br>
-                            <a href="http://api.openweathermap.org/geo/1.0/direct?q=newyork,NY&appid=5f032585108c80fe6cb544e3869e6a7f">New York</a>
-                            <br>
-                            <a href="http://api.openweathermap.org/geo/1.0/direct?q=orlando,FL&appid=5f032585108c80fe6cb544e3869e6a7f">Orlando</a>
-                            <br>
-                            <a href="http://api.openweathermap.org/geo/1.0/direct?q=sanfrancisco,CA&appid=5f032585108c80fe6cb544e3869e6a7f">San Francisco</a>
-                            <br>
-                            <a href="http://api.openweathermap.org/geo/1.0/direct?q=seattle,WA&appid=5f032585108c80fe6cb544e3869e6a7f">Seattle</a>
-                            <br>
-                            <a href="http://api.openweathermap.org/geo/1.0/direct?q=denver,CO&appid=5f032585108c80fe6cb544e3869e6a7f">Denver</a>
-                            <br>
-                            <a href="http://api.openweathermap.org/geo/1.0/direct?q=atlanta,GA&appid=5f032585108c80fe6cb544e3869e6a7f">Atlanta</a>
-                            <br>
-                            <a href="http://api.openweathermap.org/geo/1.0/direct?q=losangeles,CA&appid=5f032585108c80fe6cb544e3869e6a7f">Los Angeles</a>
-                            <br>
-                            <a href="http://api.openweathermap.org/geo/1.0/direct?q=lasvegas,NV&appid=5f032585108c80fe6cb544e3869e6a7f">Las Vegas</a>
-                        </div>
-                    </div>
-                </div>
-                <br>
-                <br>
-
-                <div class="results-container">
-                <h2>Span?Name/Date/Forecast icon</h2>
-                    <div id="city-stats">
-                        <!-- populated list of weather conditions loaded on search (city saved from previous search?) -->
-                        <ul>
-                            <li>Temperature: " " oC</li>
-                            <li>Humidity: " " %</li>
-                            <li>Wind Speed: " " KMPH</li>
-                            <li>UV Index: " "</li>
-                        </ul>
-                    </div>
-                    <br>
-                    <br>
-                <h2>5-day forecast:</h2>
-                    <div class="daily-forecast">
-                        <!-- 5 populated boxes showing weather conditions loaded on search for the next 5 days -->
-                        <object id="figure1">
-                            <img src="..." class="figure-img img-fluid rounded" alt="...">
-                            <caption class="figure-caption">Date+1</caption>
-                        </object>
-                        <object id="figure2">
-                            <img src="..." class="figure-img img-fluid rounded" alt="...">
-                            <caption class="figure-caption">Date+2</caption>
-                        </object>
-                        <object id="figure3">
-                            <img src="..." class="figure-img img-fluid rounded" alt="...">
-                            <caption class="figure-caption">Date+3</caption>
-                        </object>
-                        <object id="figure4">
-                            <img src="..." class="figure-img img-fluid rounded" alt="...">
-                            <caption class="figure-caption">Date+4</caption>
-                        </object>
-                        <object id="figure5">
-                            <img src="..." class="figure-img img-fluid rounded" alt="...">
-                            <caption class="figure-caption">Date+5</caption>
-                        </object>
+                <div class="card" style="width: 20rem;">
+                    <!-- A set list of cities loaded on opening webpage -->
+                    <div class="list-cities list-cities-flush">
+                        <a
+                            href="http://api.openweathermap.org/geo/1.0/direct?q=melbourne,AU&appid=5f032585108c80fe6cb544e3869e6a7f">Melbourne,AU</a>
+                        <br>
+                        <a
+                            href="http://api.openweathermap.org/geo/1.0/direct?q=chicago,US&appid=5f032585108c80fe6cb544e3869e6a7f">Chicago,US</a>
+                        <br>
+                        <a
+                            href="http://api.openweathermap.org/geo/1.0/direct?q=newyork,US&appid=5f032585108c80fe6cb544e3869e6a7f">New
+                            York,US</a>
+                        <br>
+                        <a
+                            href="http://api.openweathermap.org/geo/1.0/direct?q=orlando,US&appid=5f032585108c80fe6cb544e3869e6a7f">Orlando,US</a>
+                        <br>
+                        <a
+                            href="http://api.openweathermap.org/geo/1.0/direct?q=sanfrancisco,US&appid=5f032585108c80fe6cb544e3869e6a7f">San
+                            Francisco,US</a>
+                        <br>
+                        <a
+                            href="http://api.openweathermap.org/geo/1.0/direct?q=seattle,US&appid=5f032585108c80fe6cb544e3869e6a7f">Seattle,US</a>
+                        <br>
+                        <a
+                            href="http://api.openweathermap.org/geo/1.0/direct?q=london,UK&appid=5f032585108c80fe6cb544e3869e6a7f">London,UK</a>
+                        <br>
+                        <a
+                            href="http://api.openweathermap.org/geo/1.0/direct?q=atlanta,US&appid=5f032585108c80fe6cb544e3869e6a7f">Atlanta,US</a>
+                        <br>
+                        <a
+                            href="http://api.openweathermap.org/geo/1.0/direct?q=paris,FR&appid=5f032585108c80fe6cb544e3869e6a7f">Paris,FR</a>
+                        <br>
+                        <a
+                            href="http://api.openweathermap.org/geo/1.0/direct?q=lasvegas,US&appid=5f032585108c80fe6cb544e3869e6a7f">Las
+                            Vegas,US</a>
                     </div>
                 </div>
             </div>
+            <br>
+            <br>
+
+            <div class="results-container">
+                <div class="row">
+                    <h2><span id="chosen-city"></span></h2>
+                    <p><span id="today"></span></p>
+                    <img id="icon"></img>
+                </div>
+                <div id="city-stats" class="container">
+                    <!-- Weather conditions loaded on search (city saved from previous search?) -->
+                    <!-- <ul>
+                        <li id="max-temperature">Temperature: " " oC maximum</li>
+                        <li id="humidity">Humidity: " " %</li>
+                        <li id="windspeed">Wind Speed: " " KMPH</li>
+                        <li id="uvindex">UV Index: " "</li>
+                    </ul> -->
+                </div>
+                <br>
+                <br>
+                <h2>5-day forecast:</h2>
+                <br>
+                <div class="daily-forecast">
+                    <!-- 5 populated boxes showing weather conditions loaded on search for the next 5 days -->
+                    <object id="figure1">
+                        <!-- <img src="..." class="figure-img img-fluid rounded" alt="..."> -->
+                        <caption class="figure-caption">Date+1</caption>
+                    </object>
+                    <object id="figure2">
+                        <!-- <img src="..." class="figure-img img-fluid rounded" alt="..."> -->
+                        <caption class="figure-caption">Date+2</caption>
+                    </object>
+                    <object id="figure3">
+                        <!-- <img src="..." class="figure-img img-fluid rounded" alt="..."> -->
+                        <caption class="figure-caption">Date+3</caption>
+                    </object>
+                    <object id="figure4">
+                        <!-- <img src="..." class="figure-img img-fluid rounded" alt="..."> -->
+                        <caption class="figure-caption">Date+4</caption>
+                    </object>
+                    <object id="figure5">
+                        <!-- <img src="..." class="figure-img img-fluid rounded" alt="..."> -->
+                        <caption class="figure-caption">Date+5</caption>
+                    </object>
+                </div>
+            </div>
+        </div>
         </div>
     </main>
 
 
 
-<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
-<script type="text/javascript" src="script.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script type="text/javascript" src="./assets/js/script.js"></script>
 
 </body>
+
 </html>

@@ -1,16 +1,20 @@
 * {
-    box-sizing: border-box;
-    margin: 0;
-    font-family: 'Balsamiq Sans', Arial, sans-serif;
-  }
-  
-  /* Color scheme sourced from https://www.color-hex.com/color-palette/107368 70s colors color palette */
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Color scheme sourced from https://www.color-hex.com/color-palette/107368 70s colors color palette */
 :root {
-    --colora: #00a0d9;
-    --colorb: #b800a6;
-    --colorc: #68a549;
-    --colord: #ff4ea6;
-    --colore: #fdcd00;
+  --colora: #00a0d9;
+  --colorb: #b800a6;
+  --colorc: #68a549;
+  --colord: #ff4ea6;
+  --colore: #fdcd00;
+}
+
+body {
+  font-family: 'Balsamiq Sans', Arial, sans-serif;
 }
 
 header {
@@ -26,7 +30,8 @@ h1 {
   font-weight: 700;
 }
 
-h2 {
+h2,
+p {
   text-align: left;
   font-size: 30px;
   font-weight: 400;
@@ -50,11 +55,11 @@ h2 {
   padding: 10px;
   margin: 8px 0;
   border: 1px solid var(--colorb);
-  border-radius: 4px;
+  border-radius: 6px;
   box-sizing: border-box;
-  font-size: 25px;
+  font-size: 20px;
 }
-  
+
 .btn {
   padding: 2px;
   margin: 2px;
@@ -64,7 +69,7 @@ h2 {
   color: var(--colore);
   font-size: 30px;
 }
-  
+
 .card {
   padding: 10px;
   border: 1px solid var(--colorc);
